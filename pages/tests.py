@@ -43,5 +43,6 @@ class aptest(stc):
         response=sel.client.get(r("v"))
         sel.assertContains(response,"vvvvvvvv")
     def test_template_content(sel):
+        #reverse doesnt work on name of this empty url extension("")
         response=sel.client.get("")
         sel.assertContains(response,"iii")    
